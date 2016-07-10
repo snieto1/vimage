@@ -1,0 +1,35 @@
+<h1>These are the #<%="#{@hash}"%> images</h1>
+
+<!-- <p> <%= @render2%> </p> -->
+
+<%= form_tag(images_display_path, method: "get") do %>
+  <%= label_tag(:q, "Find me images of #") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("GO!!!") %>
+<% end %>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@render2[0]%>" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@render2[1]%>" frameborder="0" allowfullscreen></iframe>
+
+
+
+<img src="<%=@render[0]%>" />
+<img src="<%=@render[1]%>" />
+<img src="<%=@render[2]%>" />
+<img src="<%=@render[3]%>" />
+<img src="<%=@render[4]%>" />
+<img src="<%=@render[5]%>" />
+<img src="<%=@render[6]%>" />
+<img src="<%=@render[7]%>" />
+<img src="<%=@render[8]%>" />
+<img src="<%=@render[9]%>" />
+<img src="<%=@render[10]%>" />
+<img src="<%=@render[11]%>" />
+<img src="<%=@render[12]%>" />
+<img src="<%=@render[13]%>" />
+<img src="<%=@render[14]%>" />
+<img src="<%=@render[15]%>" />
+<img src="<%=@render[16]%>" />
+<img src="<%=@render[17]%>" />
+<img src="<%=@render[18]%>" />
+<img src="<%=@render[19]%>" />
