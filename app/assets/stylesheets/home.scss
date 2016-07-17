@@ -1,3 +1,35 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.body {
+  background-color: #2F4F4F;
+}
+
+.logo {
+  position:relative;
+  top: 10em;
+  left: 23em;
+}
+
+.form1 {
+  position: relative;
+  top: 7em;
+  right: 3em;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+
+
+.title1 {
+  position: relative;
+  top: 14em;
+  right: 2em;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-family: fantasy;
+}

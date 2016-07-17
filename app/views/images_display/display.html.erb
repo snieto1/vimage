@@ -1,35 +1,36 @@
-<h1>These are the #<%="#{@hash}"%> images</h1>
+<body class="display_body">
 
-<!-- <p> <%= @render2%> </p> -->
+<div class="logo23"><%=image_tag("logo4.png", options={})%></div>
 
-<%= form_tag(images_display_path, method: "get") do %>
-  <%= label_tag(:q, "Find me images of #") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("GO!!!") %>
+<div class="form"> <%= form_tag(images_display_path, method: "get") do %>
+  <%= label_tag(:q, "Just VIMAGE it") %>
+  <font color="black" class="search_bar"><%= text_field_tag(:q) %></font>
+  <font color="black"><%= submit_tag("GO") %></font>
+  <% end %>
+</div>
+
+<h5 class="title">videos & images on one page </h5>
+
+<hr></hr>
+
+<div class="video">
+<% @render2.each do |video| %>
+  <iframe class:"video_style" width="560" height="315" src="https://www.youtube.com/embed/<%=video%>" frameborder="0" allowfullscreen></iframe>
 <% end %>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@render2[0]%>" frameborder="0" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@render2[1]%>" frameborder="0" allowfullscreen></iframe>
+<div class="images">
+<% @render.each do |image| %>
+  <img class="img-responsive" alt="Responsive image" src="<%=image%>" />
+<% end %>
+</div>
 
 
 
-<img src="<%=@render[0]%>" />
-<img src="<%=@render[1]%>" />
-<img src="<%=@render[2]%>" />
-<img src="<%=@render[3]%>" />
-<img src="<%=@render[4]%>" />
-<img src="<%=@render[5]%>" />
-<img src="<%=@render[6]%>" />
-<img src="<%=@render[7]%>" />
-<img src="<%=@render[8]%>" />
-<img src="<%=@render[9]%>" />
-<img src="<%=@render[10]%>" />
-<img src="<%=@render[11]%>" />
-<img src="<%=@render[12]%>" />
-<img src="<%=@render[13]%>" />
-<img src="<%=@render[14]%>" />
-<img src="<%=@render[15]%>" />
-<img src="<%=@render[16]%>" />
-<img src="<%=@render[17]%>" />
-<img src="<%=@render[18]%>" />
-<img src="<%=@render[19]%>" />
+<div class="images">
+<% @render3.each do |image| %>
+  <img class="img-responsive" alt="Responsive image" src="<%=image%>" />
+<% end %>
+</div>
+
+</body>

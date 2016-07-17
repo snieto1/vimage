@@ -5,21 +5,26 @@ class ImagesDisplayController < ApplicationController
     @response = HTTParty.get(url)
     @array = @response["posts"]
     @render = []
-
     @array.each do |array_element|
     @render << array_element["image"]
+    end
+
+    url = "https://api.social-searcher.com/v2/search?q=#{@hash}&network=tumblr&key=97035760e6ee719b7fd7545a87d9e9d1"
+    @response3 = HTTParty.get(url)
+    @array = @response3["posts"]
+    @render3 = []
+    @array.each do |array_element|
+    @render3 << array_element["image"]
     end
 
     url = "https://api.social-searcher.com/v2/search?q=#{@hash}&network=youtube&key=97035760e6ee719b7fd7545a87d9e9d1"
     @response2 = HTTParty.get(url)
     @array2 = @response2["posts"]
     @render2 = []
-
     @array2.each do |array_element|
     video = array_element["url"].split("=")
     video = video[1]
     @render2 << video
     end
   end
-
 end

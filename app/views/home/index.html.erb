@@ -1,9 +1,17 @@
+<body class="body">
 
+<%=image_tag"logo.png", class:"logo"%>
 
-<h1>Welcome to Insta Project</h1>
-
-<%= form_tag(images_display_path, method: "get") do %>
-  <%= label_tag(:q, "Find me images of #") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("GO!!!") %>
+<span class="form1"> <%= form_tag(images_display_path, method: "get") do %>
+ <%= label_tag(:q, "Just VIMAGE it") %>
+ <font color="black" class="search_bar"><%= text_field_tag(:q) %></font>
+ <font color="black"><%= submit_tag("GO") %></font>
 <% end %>
+</span>
+
+<h5 class="title1">videos & images on one page </h5>
+
+
+
+
+</body>
